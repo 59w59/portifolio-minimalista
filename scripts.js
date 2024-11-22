@@ -85,7 +85,7 @@ document.querySelector('.contact-form').addEventListener('submit', (event) => {
   const message = document.getElementById('message').value;
 
   // Enviar os dados para o backend na Vercel
-  fetch('https://seu-projeto.vercel.app/api/send-email', {
+  fetch("api/send-email.js", {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
