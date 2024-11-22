@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Matheus Campos</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <img src="images/dev-brands-solid.svg" alt="Logo">
+      <h1>Luis dev</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">home</a></li>
+        <li><a href="#hard-skills">sobre</a></li>
+        <li><a href="#portfolio">portfólio</a></li>
+        <li><a href="#servicos">serviços</a></li>
+        <li><a href="#contato">contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção Hero -->
+  <section class="hero">
+    <div class="content">
+      <p>Olá pessoas,</p>
+      <h2>
+        EU SOU UM<br>
+        <span>Desenvolvedor web</span>
+      </h2>
+      <p>Seja bem-vindo ao meu portfólio</p>
+      <button>Saiba mais sobre mim</button>
+      <div class="social-links">
+        <a href="https://github.com/59w59" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        </a>
+        <a href="https://www.instagram.com/luisk_0dz9/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+    <div class="image">
+      <img src="images/4136918.jpg" alt="Ilustração de programador">
+    </div>
+  </section>
+
+  <!-- Hard Skills Section -->
+  <section id="hard-skills">
+    <div class="profile">
+      <h2></h2>
+      <p>
+        Meu nome e Luis Miguel 👋. Eu sou do Brasil, Valinhos/SP.<br>
+        Estudo programação faz 2 anos, quando eu atingir a maior idade quero fazer DS.
+      </p>
+    </div>
+
+    <div class="skills">
+      <h3>Hard Skills</h3>
+      <div class="skills-grid">
+        <!-- Python -->
+        <div class="skill">
+          <p>Python</p>
+          <div class="rating">
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- HTML -->
+        <div class="skill">
+          <p>HTML</p>
+          <div class="rating">
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- React -->
+        <div class="skill">
+          <p>React</p>
+          <div class="rating">
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- JavaScript -->
+        <div class="skill">
+          <p>JavaScript</p>
+          <div class="rating">
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- JavaScript -->
+        <div class="skill">
+          <p>Bootstrap</p>
+          <div class="rating">
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- JavaScript -->
+        <div class="skill">
+          <p>node.js</p>
+          <div class="rating">
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span class="filled"></span>
+          </div>
+        </div>
+        <!-- JavaScript -->
+        <div class="skill">
+          <p>Git</p>
+          <div class="rating">
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- CSS -->
+        <div class="skill">
+          <p>CSS</p>
+          <div class="rating">
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- MySQL -->
+        <div class="skill">
+          <p>MySQL</p>
+          <div class="rating">
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- Postgres -->
+        <div class="skill">
+          <p>Postgres</p>
+          <div class="rating">
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span class="filled"></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="portfolio-header">
+      <h2>Meu <span>Portfólio</span></h2>
+      <p>Estes são alguns dos trabalhos e projetos que já realizei</p>
+    </div>
+    <div class="portfolio-filters">
+      <button class="filter active" data-filter="all">Todos</button>
+      <button class="filter" data-filter="web-app">Web App</button>
+      <button class="filter" data-filter="data-analysis">Data Analysis</button>
+      <button class="filter" data-filter="outros">Outros</button>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-item" data-category="web-app"></div>
+      <div class="portfolio-item" data-category="data-analysis"></div>
+      <div class="portfolio-item" data-category="web-app"></div>
+      <div class="portfolio-item" data-category="outros"></div>
+      <div class="portfolio-item" data-category="outros"></div>
+    </div>
+  </section>
+
+  <section id="techs">
+    <h2>Minhas <span>Techs</span></h2>
+    <div class="tech-section">
+      <div class="tech-category">
+        <h3>Tecnologias</h3>
+        <p>Já utilizadas</p>
+        <div class="tech-icons">
+          <img src="images/node-js-brands-solid.svg" alt="Node.js">
+          <img src="images/python-brands-solid.svg" alt="Python">
+          <img src="images/react-brands-solid.svg" alt="React">
+        </div>
+      </div>
+      <div class="tech-category">
+        <h3>Tecnologias</h3>
+        <p>Atualmente Desenvolvendo</p>
+        <div class="tech-icons">
+          <img src="images/html5-brands-solid.svg" alt="HTML5">
+          <img src="images/css3-alt-brands-solid.svg" alt="CSS3">
+          <img src="images/js-brands-solid.svg" alt="JavaScript">
+          <img src="images/database-solid.svg" alt="dataBase">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiência Profissional -->
+  <section id="experience">
+    <div class="experience-header">
+      <h2>Experiência <span>Profissional</span></h2>
+      <p>Minha jornada está apenas começando, sempre aprendendo</p>
+    </div>
+    <div class="experience-cards">
+      <div class="card">
+        <h3>front-end</h3>
+        <p>estava fazendo um aplicativo para computador que no se chamava viper x, e la cuidei totalmente do front.</p>
+      </div>
+      <div class="card">
+        <h3>Chefe de equipe</h3>
+        <p>Recebi uma proposta da asterism, para ser chefe de equipe integralmente, la desenvolvi habilidades e melhorei minha gestão.</p>
+      </div>
+      <div class="card">
+        <h3>Ds bots</h3>
+        <p>Fiz o desenvolvimento de bots para discord, bots de segurança entre outros.</p>
+      </div>
+    </div>
+    <blockquote class="quote">
+      <p>
+        "Aprender é a única coisa que a <span>mente não se cansa</span>, nunca tem medo e nunca se arrepende."
+      </p>
+      <cite>~Leonardo da Vinci</cite>
+    </blockquote>
+  </section>
+
+  <section id="contact">
+    <h2>Entre em <span>Contato</span></h2>
+    <p>Se você tiver alguma dúvida ou proposta, sinta-se à vontade para me enviar uma mensagem!</p>
+    
+    <div class="contact-container">
+      <!-- Formulário -->
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" placeholder="Seu nome" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Seu email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" placeholder="Escreva sua mensagem aqui" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar Mensagem</button>
+      </form>
+      <div id="notification" class="hidden">
+        <p>Mensagem enviada com sucesso! Entrarei em contato em breve.</p>
+      </div>
+      <!-- Links de Contato -->
+      <div class="contact-links">
+        <a href="luismiguel70415@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
