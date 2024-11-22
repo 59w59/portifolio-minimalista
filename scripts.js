@@ -109,3 +109,34 @@ document.querySelector('.contact-form').addEventListener('submit', (event) => {
   // Reseta o formulário
   event.target.reset();
 });
+
+const testimonials = document.querySelectorAll('.testimonial');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+let currentIndex = 0;
+
+const updateTestimonials = () => {
+  testimonials.forEach((testimonial, index) => {
+    // Remove a classe active de todos os testemunhos
+    testimonial.classList.remove('active');
+    // Adiciona a classe active apenas ao testemunho atual
+    if (index === currentIndex) {
+      testimonial.classList.add('active');
+    }
+  });
+};
+
+// Navegar para o testemunho anterior
+prevButton.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+  updateTestimonials();
+});
+
+// Navegar para o próximo testemunho
+nextButton.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % testimonials.length;
+  updateTestimonials();
+});
+
+// Inicializar o primeiro testemunho como ativo
+updateTestimonials();

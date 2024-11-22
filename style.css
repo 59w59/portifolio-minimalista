@@ -537,6 +537,93 @@
   filter: grayscale(0%);
 }
 
+/* Seção de Testemunhos */
+#testimonials {
+  padding: 50px 20px;
+  background: var(--background-card);
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#testimonials h2 {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.testimonial-slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  flex: 0 0 100%;
+  display: block; /* Alterar para sempre visível (ajustado via JS) */
+  opacity: 0; /* Inicia invisível para animações */
+  transition: opacity 0.5s ease-in-out;
+  visibility: hidden; /* Ocultar inicialmente */
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: var(--green-lightest);
+  color: var(--text-dark);
+  font-style: italic;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.testimonial.active {
+  display: block; /* Mostra apenas o testemunho ativo */
+  opacity: 1; /* Torna o elemento visível */
+}
+
+.testimonial p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.testimonial span {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--green-primary);
+}
+
+/* Botões de Navegação */
+.testimonial-navigation {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial-navigation button {
+  border: none;
+  background: var(--green-light);
+  color: var(--green-darkest);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.testimonial-navigation button:hover {
+  background: var(--green-primary);
+  transform: scale(1.1);
+}
+
 /* Seção Experiência Profissional */
 #experience {
   max-width: 1200px;
@@ -764,18 +851,18 @@
 }
 @media (max-width: 768px) {
   header {
-    flex-direction: grid;
+    flex-direction: column;
     align-items: flex-start;
     padding: 20px;
   }
 
   header .logo {
-    justify-content: flex;
+    justify-content: center;
     width: 100%;
   }
 
   header nav ul {
-    flex-direction: grid;
+    flex-direction: column;
     gap: 10px;
     width: 100%;
   }
@@ -815,12 +902,85 @@
     font-size: 1.8rem;
   }
 
-  .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+/* Responsividade Geral */
+@media (max-width: 480px) {
+  body {
+    padding: 0 10px; /* Adiciona espaçamento geral */
   }
 
-  .portfolio-item img {
-    height: 150px;
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+  }
+
+  header .logo {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  header nav ul {
+    display: none; /* Esconde o menu por padrão */
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    background-color: var(--background-card);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    position: absolute;
+    top: 70px;
+    width: 90%;
+    z-index: 10;
+  }
+
+  header.nav-open nav ul {
+    display: flex;
+  }
+
+  header .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--green-primary);
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .hero .content h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero .content p {
+    font-size: 1rem;
+  }
+
+  .hero .image img {
+    width: 80%;
+  }
+
+  #hard-skills .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  #hard-skills .profile img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+  }
+
+  .portfolio-item {
+    margin-bottom: 20px;
   }
 
   .tech-section {
@@ -833,12 +993,32 @@
     height: 50px;
   }
 
-  .experience-cards {
+  #testimonials {
+    padding: 20px 10px;
+  }
+
+  .testimonial-slider {
     flex-direction: column;
   }
 
+  .testimonial {
+    padding: 15px 10px;
+    font-size: 1rem;
+  }
+
+  .testimonial-navigation button {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+
+  .experience-cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
   .card {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .contact-container {
@@ -850,3 +1030,15 @@
   .contact-links {
     max-width: 100%;
   }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

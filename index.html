@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 
 <body>
@@ -22,8 +24,8 @@
         <li><a href="#home">home</a></li>
         <li><a href="#hard-skills">sobre</a></li>
         <li><a href="#portfolio">portfólio</a></li>
-        <li><a href="#servicos">serviços</a></li>
-        <li><a href="#contato">contato</a></li>
+        <li><a href="#experience">experiencia</a></li>
+        <li><a href="#contact-container">contato</a></li>
       </ul>
     </nav>
   </header>
@@ -33,13 +35,14 @@
     <div class="content">
       <p>Olá pessoas,</p>
       <h2>
-        EU SOU UM<br>
+        Eu sou um<br>
         <span>Desenvolvedor web</span>
       </h2>
-      <p>Seja bem-vindo ao meu portfólio</p>
-      <a href="https://wa.me/5519981860549" target="_blank">
-        <button>Saiba mais sobre mim</button>
-      </a>      
+      <section id="hero" data-aos="fade-up">
+        <h1>Bem-vindo ao Meu Portfólio</h1>
+        <p>Conheça mais sobre mim e meus projetos.</p>
+      </section>
+      </a>
       <div class="social-links">
         <a href="https://github.com/59w59" target="_blank">
           <i class="fab fa-github"></i>
@@ -184,8 +187,10 @@
 
   <section id="portfolio">
     <div class="portfolio-header">
-      <h2>Meu <span>Portfólio</span></h2>
-      <p>Estes são alguns dos trabalhos e projetos que já realizei</p>
+      <section id="portfolio" data-aos="zoom-in">
+        <h2>Meu Portfólio</h2>
+        <p>Alguns dos projetos que já realizei.</p>
+      </section>
     </div>
     <div class="portfolio-filters">
       <button class="filter active" data-filter="all">Todos</button>
@@ -215,7 +220,7 @@
         </div>
       </div>
     </div>
-  </section>  
+  </section>
 
   <section id="techs">
     <h2>Minhas <span>Techs</span></h2>
@@ -241,7 +246,28 @@
       </div>
     </div>
   </section>
-
+  <section id="testimonials">
+    <h2>O que dizem sobre mim</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial active">
+        <p>"Trabalho excelente! Sempre entrega no prazo."</p>
+        <span>- Cliente A</span>
+      </div>
+      <div class="testimonial">
+        <p>"Muito dedicado e profissional. Recomendo!"</p>
+        <span>- Cliente B</span>
+      </div>
+      <div class="testimonial">
+        <p>"Confiável e inovador em cada projeto."</p>
+        <span>- Cliente C</span>
+      </div>
+    </div>
+    <div class="testimonial-navigation">
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
+    </div>
+  </section>  
+  
   <!-- Experiência Profissional -->
   <section id="experience">
     <div class="experience-header">
@@ -255,7 +281,8 @@
       </div>
       <div class="card">
         <h3>Chefe de equipe</h3>
-        <p>Recebi uma proposta da asterism, para ser chefe de equipe integralmente, la desenvolvi habilidades e melhorei minha gestão.</p>
+        <p>Recebi uma proposta da asterism, para ser chefe de equipe integralmente, la desenvolvi habilidades e melhorei
+          minha gestão.</p>
       </div>
       <div class="card">
         <h3>Ds bots</h3>
@@ -273,7 +300,7 @@
   <section id="contact">
     <h2>Entre em <span>Contato</span></h2>
     <p>Se você tiver alguma dúvida ou proposta, sinta-se à vontade para me enviar uma mensagem!</p>
-    
+
     <div class="contact-container">
       <!-- Formulário -->
       <form class="contact-form">
@@ -300,6 +327,13 @@
       </div>
     </div>
   </section>
+  <script>
+    AOS.init({
+      duration: 1000, // Duração da animação em ms
+      easing: 'ease', // Tipo de easing
+      once: true, // Executa a animação apenas uma vez
+    });
+  </script>
   <script src="scripts.js"></script>
 </body>
 
