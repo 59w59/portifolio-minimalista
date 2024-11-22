@@ -80,38 +80,31 @@ anchorLinks.forEach((link) => {
 document.querySelector('.contact-form').addEventListener('submit', (event) => {
   event.preventDefault();
 
-  // Exibe a notificação personalizada
-  const notification = document.getElementById('notification');
-  notification.classList.add('visible');
-
-  // Remove a notificação após 3 segundos
-  setTimeout(() => {
-    notification.classList.remove('visible');
-  }, 3000);
-
-  // Reseta o formulário
-  event.target.reset();
-});
-
-document.querySelector('.contact-form').addEventListener('submit', (event) => {
-  event.preventDefault(); // Impede o comportamento padrão de envio
-
-  // Captura os valores dos campos
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
 
-  // Exibe os dados no console (para testes)
-  console.log('Nome:', name);
-  console.log('Email:', email);
-  console.log('Mensagem:', message);
-
-  // Simula o envio bem-sucedido
-  const notification = document.getElementById('notification');
-  notification.classList.add('visible');
-  setTimeout(() => {
-    notification.classList.remove('visible');
-  }, 3000);
+  // Enviar os dados para o backend na Vercel
+  fetch('https://seu-projeto.vercel.app/api/send-email', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ name, email, message }),
+  })
+    .then((response) => {
+      if (response.ok) {
+        console.log('Mensagem enviada com sucesso!');
+        const notification = document.getElementById('notification');
+        notification.classList.add('visible');
+        setTimeout(() => {
+          notification.classList.remove('visible');
+        }, 3000);
+      } else {
+        console.error('Erro ao enviar mensagem.');
+      }
+    })
+    .catch((error) => console.error('Erro:', error));
 
   // Reseta o formulário
   event.target.reset();
